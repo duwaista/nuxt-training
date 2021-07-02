@@ -1,6 +1,7 @@
-<template class="feed-root">
+<template>
   <div class="feed-list">
     <h1><span>Ah shit, here we go again</span></h1>
+    <span><nuxt-link to="/">Kill boobas</nuxt-link></span>
     <div v-for="feed in all" :key="feed._id" class="feed-container">
       <img class="feed-image" :src="feed.posts" />
     </div>
@@ -59,5 +60,15 @@ export default {
   width: 98%;
   height: 96%;
   object-fit: cover;
+}
+@media (prefers-color-scheme: light) {
+  .feed-list {
+    background-color: white;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .feed-list {
+    background-color: black;
+  }
 }
 </style>
